@@ -15,21 +15,8 @@ class Exclusive extends React.Component {
 
 
     componentDidMount() {
-		let _this = this;
-		this.getImages();
-		$(window).scroll(function() {
-			if ($(window).scrollTop() >= 80 && !_this.state.fixLeftColumn) {
-				_this.setState({fixLeftColumn: true});
-			}
-			else if ($(window).scrollTop() < 80 && _this.state.fixLeftColumn) {
-				_this.setState({fixLeftColumn: false});
-			}
-
-			if ($(window).scrollTop() + $(window).height() >= $(document).height() - 200 && !_this.state.isLoading) {
-				_this.getImages();
-			}
-		});
-	}
+	this.getImages();
+    }
 
 
 
